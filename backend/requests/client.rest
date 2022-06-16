@@ -1,0 +1,45 @@
+post http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Ganga",
+    "name": "Ganga creator",
+    "password": "gangaiseverything"
+}
+
+###
+
+post http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+      "title": "new test likes",
+        "author": "Michael Chan",
+        "url": "https://reactpatterns.com/",
+        "likes": 7,
+        "userId": "629a5b83790f1b2899fe64d6"
+}
+
+
+###
+post http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "Ganga",
+    "password": "gangaiseverything"
+}
+
+
+###
+
+post http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdhbmdhIiwiaWQiOiI2MjlhNWI4Mzc5MGYxYjI4OTlmZTY0ZDYiLCJpYXQiOjE2NTQyODU1NDV9.frH71xsNX6zUfs8n-O9eeX15r2MFMAEiVvCqdaRK_Hw
+
+{
+ "title": "Test",
+        "author": "Michael Chan",
+        "likes": 74,
+        "url": "https://reactpatterns.com/"
+}
